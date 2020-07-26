@@ -21,6 +21,14 @@
         td
           strong.label 必須
         td.arrow_box
+          | 店舗名
+        td
+          = f.text_field :store
+          br
+      tr
+        td
+          strong.label 必須
+        td.arrow_box
           | 氏名
         td
           = f.text_field :first_name, class:"harf"
@@ -42,6 +50,13 @@
           | 電話番号
         td
           = f.text_field :tel
+      tr
+        td
+          strong.label 必須
+        td.arrow_box
+          | 携帯番号
+        td
+          = f.text_field :mobile
       tr
         td
           strong.label 必須
@@ -77,14 +92,14 @@
         td.arrow_box
           | 建物
         td
-         = f.select(:build,[\
-           ["木造","木造"],\
-           ["鉄骨造","鉄骨造"],\
-           ["鉄筋コンクリート（RC）","鉄筋コンクリート（RC）"],\
-           ["鉄骨鉄筋コンクリート（SRC）","鉄骨鉄筋コンクリート（SRC）"],
-           ["軽量鉄骨造","軽量鉄骨造"],
-           ["その他","その他"],
-          ])
+          = f.text_field :build
+      tr
+        td
+          strong.label 必須
+        td.arrow_box
+          | URL（店舗写真があるもの）
+        td
+          = f.text_field :url
       tr
         td
           strong.label 必須
@@ -97,9 +112,25 @@
         td
           strong.label 必須
         td.arrow_box
-          | 解体予定時期
+          | 席数
         td
-          = f.select(:introduction,[\
+          = f.number_field :box
+          | 席
+      tr
+        td
+          strong.label 必須
+        td.arrow_box
+          | 売却希望額
+        td
+          = f.number_field :price
+          | 万円
+      tr
+        td
+          strong.label 必須
+        td.arrow_box
+          | 売却希望時期
+        td
+          = f.select(:period,[\
              ["選択する","選択する"],\
              ["1ヶ月以内","1ヶ月以内"],\
              ["3ヶ月以内","3ヶ月以内"],\
