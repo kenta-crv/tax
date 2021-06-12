@@ -14,9 +14,9 @@
  *= require_self
  */
 
- $main_color: #F0900F;
+ $main_color: #772E13;
  $sub_color: #F27200;
- $asort_color: #FFD809;
+ $asort_color: orange;
 
 body {
   width:100%;
@@ -117,7 +117,7 @@ main {
 
 
  .back-image-top {
-   background-image: url('base.png');
+   background-image: url('base4.png');
    background-size: 100%;
    background-repeat: no-repeat;
    vertical-align: middle;

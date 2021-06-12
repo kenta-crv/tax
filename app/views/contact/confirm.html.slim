@@ -18,28 +18,16 @@ br
         td.arrow_box
           | 店舗名
         td
-          = f.hidden_field :store
-          = @contact.store
+          = f.hidden_field :company
+          = @contact.company
       tr
         td
           strong.label 必須
         td.arrow_box
           | 氏名
         td
-          = f.hidden_field :first_name
-          = @contact.first_name
-          = f.hidden_field :last_name
-          = @contact.last_name
-      tr
-        td
-          strong.label 必須
-        td.arrow_box
-          | シメイ
-        td
-         = f.hidden_field :first_kana
-         = @contact.first_kana
-         = f.hidden_field :last_kana
-         = @contact.last_kana
+          = f.hidden_field :name
+          = @contact.name
       tr
         td
           strong.label 必須
@@ -48,14 +36,6 @@ br
         td
           = f.hidden_field :tel
           = @contact.tel
-      tr
-        td
-          strong.label 必須
-        td.arrow_box
-          | 携帯番号
-        td
-          = f.hidden_field :mobile
-          = @contact.mobile
       tr
         td
           strong.label 必須
@@ -70,38 +50,13 @@ br
         td.arrow_box
           | 都道府県
         td
-          = f.hidden_field :prefecture
-          = @contact.prefecture
-          | 県
-      tr
-        td
-          strong.label 必須
-        td.arrow_box
-          | 市町村
-        td
-          = f.hidden_field :city
-          = @contact.city
-      tr
-        td
-          strong.label 必須
-        td.arrow_box
-          | 番地以降
-        td
-          = f.hidden_field :town
-          = @contact.town
-      tr
-        td
-          strong.label 必須
-        td.arrow_box
-          | 建物
-        td
-          = f.hidden_field :build
-          = @contact.build
+          = f.hidden_field :address
+          = @contact.address
       .tr
         td
           strong.label 必須
         td.arrow_box
-          | URL
+          | 会社URL
         td
           = f.hidden_field :url
           = @contact.url
@@ -109,7 +64,7 @@ br
         td
           strong.label 必須
         td.arrow_box
-          | 総延床面積
+          | 税理士を探す範囲
         td
           = f.hidden_field :area
           = @contact.area
@@ -118,34 +73,24 @@ br
         td
           strong.label 必須
         td.arrow_box
-          | 席数
+          | 重要視する点
         td
-          = f.hidden_field :box
-          = @contact.box
+          = f.hidden_field :important
+          = @contact.important
           | 席
+      tr
+        td
+          strong.label.label-blue 任意
+        td.arrow_box
+          | 導入希望時期
+        td
+          = f.hidden_field :period
+          = @contact.period
       tr
         td
           strong.label 必須
         td.arrow_box
-          | 売却希望額
-        td
-          = f.hidden_field :price
-          = @contact.price
-          | 席
-      tr
-        td
-          strong.label.label-blue 任意
-        td.arrow_box
-          | 売却希望時期
-        td
-          = f.hidden_field :period
-          = @contact.period
-          | ヶ月以内
-      tr
-        td
-          strong.label.label-blue 任意
-        td.arrow_box
-          | 追記事項
+          | 相談内容
         td
           = f.hidden_field :remarks
           = @contact.remarks
