@@ -4,94 +4,104 @@ br
 
 = form_for(@contact, url: { action: :thanks }) do |f|
   .tops-wrapper
-    h2.heading
-      span> お問い合わせ内容確認
-      | フォーム
-    table.company
+    h2.headline
+      お問い合わせ内容確認
+    .company-wrapper
+     table.company.responsive-table
       colgroup
-        col width="10%"
-        col width="20%"
-        col width="70%"
+        col.col-1
+        col.col-2
+        col.col-3
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 店舗名
-        td
+        td.responsive-cell
+         .input-container
           = f.hidden_field :company
           = @contact.company
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 氏名
-        td
+        td.responsive-cell
+         .input-container
           = f.hidden_field :name
           = @contact.name
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 電話番号
-        td
+        td.responsive-cell
+         .input-container
           = f.hidden_field :tel
           = @contact.tel
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | メールアドレス
-        td
+        td.responsive-cell
+         .input-container
           = f.hidden_field :email
           = @contact.email
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 都道府県
-        td
+        td.responsive-cell
+         .input-container
           = f.hidden_field :address
           = @contact.address
       .tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 会社URL
-        td
+        td.responsive-cell
+         .input-container
           = f.hidden_field :url
           = @contact.url
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 税理士を探す範囲
-        td
+        td.responsive-cell
+         .input-container
           = f.hidden_field :area
           = @contact.area
           | 坪
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 重要視する点
-        td
+        td.responsive-cell
+         .input-container
           = f.hidden_field :important
           = @contact.important
           | 席
       tr
-        td
+        td.label-cell
           strong.label.label-blue 任意
-        td.arrow_box
+        td.arrow-box-cell
           | 導入希望時期
-        td
+        td.responsive-cell
+         .input-container
           = f.hidden_field :period
           = @contact.period
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 相談内容
-        td
+        td.responsive-cell
+         .input-container
           = f.hidden_field :remarks
           = @contact.remarks
       tr

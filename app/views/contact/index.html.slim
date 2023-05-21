@@ -8,66 +8,73 @@
   =image_tag 'contact.gif', width: '100%'
 
   .tops-wrapper
-    h1.headline-first
-      span> お問い合わせ
-      | フォーム
+    h1.headline
+      お問い合わせフォーム
     br
-    table.company
+    .company-wrapper
+     table.company.responsive-table
       colgroup
-        col width="10%"
-        col width="20%"
-        col width="70%"
+        col.col-1
+        col.col-2
+        col.col-3
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 会社名
-        td
+        td.responsive-cell
+         .input-container
           = f.text_field :company
           br
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 氏名
-        td
+        td.responsive-cell
+         .input-container
           = f.text_field :name
           br
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 電話番号
-        td
+        td.responsive-cell
+         .input-container
           = f.text_field :tel
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | メールアドレス
-        td
+        td.responsive-cell
+         .input-container
           = f.email_field :email
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 住所
-        td
+        td.responsive-cell
+         .input-container
           = f.text_field :address
 
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 会社URL
-        td
+        td.responsive-cell
+         .input-container
           = f.text_field :url
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 税理士を探す範囲
-        td
+        td.responsive-cell
+         .input-container
           = f.select(:area,[\
              ["選択する","選択する"],\
              ["市内で探す","市内で探す"],\
@@ -75,11 +82,12 @@
              ["全国で探す","全国で探す"],
           ])
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 重要視する点
-        td
+        td.responsive-cell
+         .input-container
           = f.select(:important,[\
              ["選択する","選択する"],\
              ["金額","金額"],\
@@ -89,11 +97,12 @@
              ["その他","その他"],
           ])
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 導入希望時期
-        td
+        td.responsive-cell
+         .input-container
           = f.select(:period,[\
              ["選択する","選択する"],\
              ["1ヶ月以内","1ヶ月以内"],\
@@ -102,11 +111,12 @@
              ["未定","未定"],
           ])
       tr
-        td
+        td.label-cell
           strong.label 必須
-        td.arrow_box
+        td.arrow-box-cell
           | 相談内容
-        td
+        td.responsive-cell
+         .input-container
           = f.text_area :remarks
       tr
         td colspan="3"
